@@ -8,6 +8,8 @@
 /* Definizione variabili */
 :root{
     --title_color: purple;
+    --card_bkgrcolor: darkblue;
+    --card_margin: 2.5%;
 }
 
 /* Attributo per utilizzo Google font */
@@ -23,14 +25,39 @@
 /* Dimensionamento e centratura sezioni */
 section{
     width: 70vw;
-    margin: auto;
+    margin: 3% auto;
     text-align: center;
+    background-color: yellow;
 }
 
 /* Attributi titolo */
 h1{
     color: var(--title_color);
     padding: 1em;
+}
+
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.card{
+    width: calc((100% / 3) - (2 * var(--card_margin))); 
+    background-color: var(--card_bkgrcolor);
+    margin: var(--card_margin);
+}
+
+.card_img img{
+    width: calc(100% / 3);
+    /* background-image: url(../img/male1.png);
+    background-size: cover; */
+    float: left;
+}
+
+.card_text{
+    width: calc((100% / 3) * 2);
+    float: left;
 }
 
 
