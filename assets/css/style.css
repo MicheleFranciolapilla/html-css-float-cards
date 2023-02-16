@@ -5,3 +5,34 @@
     padding: 0;
 }
 
+/* Definizione variabili */
+:root{
+    --title_color: purple;
+}
+
+/* Attributo per utilizzo Google font */
+.google_font{
+    font-family: 'Fredoka One', cursive;
+}
+
+.default_font{
+    font-weight: 500;
+    font-family: initial;
+}
+
+/* Dimensionamento e centratura sezioni */
+section{
+    width: 70vw;
+    margin: auto;
+    text-align: center;
+}
+
+/* Attributi titolo */
+h1{
+    color: var(--title_color);
+    padding: 1em;
+}
+
+
+
+
