@@ -11,7 +11,9 @@
     --section_width: 70vw;
     --card_bkgrcolor: #0F0E17;
     --card_textcolor: #FFFFFE;
+    --card_textcolor_hov: yellowgreen;
     --card_mailcolor: #6ECBDD;
+    --card_mailcolor_hov: yellow;
     --card_bordercolor: rgba(146, 93, 225, 0.6);
     --card_margin: 2.5%;
 }
@@ -60,9 +62,20 @@ h1{
     box-shadow: 0 0 5px 3px var(--card_bordercolor);
 }
 
+/* Al passaggio del mouse, svanisce l'ombra della card */
+.card:hover{
+    box-shadow: none;
+}
+
+/* Al passaggio del mouse sulla card, il colore del testo cambia */
+.card:hover .card_text{
+    color: var(--card_textcolor_hov);
+}
+
 /* Dimensionamento della foto ad un terzo della card (larghezza) */
 .card_img{
     width: calc(100% / 3);
+    height: auto;
 }
 
 /* Dimensionamento della sezione dati (testo) a due terzi della card (larghezza) */
@@ -82,6 +95,11 @@ h1{
 /* Attributi del link alla mail */
 .card_mail{
     color: var(--card_mailcolor);
+    text-decoration: none;
     font-size: small;
 }
 
+/* Al passaggio del mouse direttamente sul link alla mail, esso si evidenzia, cambiando colore */
+.card_mail:hover{
+    color: var(--card_mailcolor_hov);
+}
