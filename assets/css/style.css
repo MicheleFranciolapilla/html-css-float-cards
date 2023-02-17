@@ -8,7 +8,7 @@
 /* Definizione variabili */
 :root{
     --title_color: purple;
-    --section_width: 80vw;
+    --section_width: 70vw;
     --card_bkgrcolor: rgb(2, 2, 50);
     --card_textcolor: rgb(219, 186, 186);
     --card_mailcolor: lightblue;
@@ -29,8 +29,8 @@
 /* Dimensionamento e centratura sezioni */
 section{
     width: var(--section_width);
-    margin: 3% auto;
-    background-color: yellow;
+    margin: auto;
+    margin-bottom: 1em;
     text-align: center;
 }
 
