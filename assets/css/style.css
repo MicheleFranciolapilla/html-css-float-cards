@@ -58,8 +58,14 @@ h1{
 .card{
     width: calc((100% / 3) - (2 * var(--card_margin)));
     background-color: var(--card_bkgrcolor);
-    margin: var(--card_margin);
+    margin: var(--card_margin) 0;
     box-shadow: 0 0 5px 3px var(--card_bordercolor);
+}
+
+/* Margini laterali alle card centrali (anche di eventuali, futuri raggruppamenti) */
+.card:nth-child(3n + 2){
+    margin-left: calc(var(--card_margin) * 3);
+    margin-right: calc(var(--card_margin) * 3);
 }
 
 /* Al passaggio del mouse, svanisce l'ombra della card */
