@@ -7,11 +7,11 @@
 
 /* Definizione variabili */
 :root{
-    --title_color: purple;
+    --title_color: #E53170;
     --section_width: 70vw;
-    --card_bkgrcolor: rgb(2, 2, 50);
-    --card_textcolor: rgb(219, 186, 186);
-    --card_mailcolor: lightblue;
+    --card_bkgrcolor: #0F0E17;
+    --card_textcolor: #FFFFFE;
+    --card_mailcolor: #6ECBDD;
     --card_bordercolor: rgba(146, 93, 225, 0.6);
     --card_margin: 2.5%;
 }
@@ -40,16 +40,19 @@ h1{
     padding: 1em;
 }
 
+/* Classe clearfix */
 .clearfix::after{
     content: "";
     display: table;
     clear: both;
 }
 
+/* Classe utilizzate per attribuire il float:left */
 .floater{
     float: left;
 }
 
+/* Layout delle singole carte */
 .card{
     width: calc((100% / 3) - (2 * var(--card_margin)));
     background-color: var(--card_bkgrcolor);
@@ -57,21 +60,26 @@ h1{
     box-shadow: 0 0 5px 3px var(--card_bordercolor);
 }
 
+/* Dimensionamento della foto ad un terzo della card (larghezza) */
 .card_img{
     width: calc(100% / 3);
 }
 
+/* Dimensionamento della sezione dati (testo) a due terzi della card (larghezza) */
 .card_text{
     width: calc((100% / 3) * 2);
     color: var(--card_textcolor);
+    font-weight: 300;
     text-align: left;
     padding: 5% 10px;
 }
 
+/* Gutter inter card */
 .card_text > h5{
     margin: 5% 0;
 }
 
+/* Attributi del link alla mail */
 .card_mail{
     color: var(--card_mailcolor);
     font-size: small;
