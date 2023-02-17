@@ -8,6 +8,7 @@
 /* Definizione variabili */
 :root{
     --title_color: purple;
+    --section_width: 80vw;
     --card_bkgrcolor: rgb(2, 2, 50);
     --card_textcolor: rgb(219, 186, 186);
     --card_mailcolor: lightblue;
@@ -27,7 +28,7 @@
 
 /* Dimensionamento e centratura sezioni */
 section{
-    width: 80vw;
+    width: var(--section_width);
     margin: 3% auto;
     background-color: yellow;
     text-align: center;
@@ -39,30 +40,32 @@ h1{
     padding: 1em;
 }
 
-.clearfix{
+.clearfix::after{
     content: "";
     display: table;
     clear: both;
 }
 
-.card{
-    width: calc((100% / 3) - (2 * var(--card_margin))); 
-    background-color: var(--card_bkgrcolor);
-    box-shadow: 0 0 5px 3px var(--card_bordercolor);
-    margin: 0 var(--card_margin);
+.floater{
+    float: left;
 }
 
-.card_img img{
+.card{
+    width: calc((100% / 3) - (2 * var(--card_margin)));
+    background-color: var(--card_bkgrcolor);
+    margin: var(--card_margin);
+    box-shadow: 0 0 5px 3px var(--card_bordercolor);
+}
+
+.card_img{
     width: calc(100% / 3);
-    float: left;
 }
 
 .card_text{
     width: calc((100% / 3) * 2);
-    padding: 5% 10px;
     color: var(--card_textcolor);
     text-align: left;
-    float: left;
+    padding: 5% 10px;
 }
 
 .card_text > h5{
@@ -73,5 +76,4 @@ h1{
     color: var(--card_mailcolor);
     font-size: small;
 }
-
 
